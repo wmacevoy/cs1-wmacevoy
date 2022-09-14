@@ -1,5 +1,5 @@
-compile = ["make","-C","hw1","-s"]
-run = "./hw1/main"
+compile = ["make","-C","active","-s"]
+run = "./active/main"
 entrypoint = "main.cpp"
 hidden = ["main", "**/*.o", "**/*.d", ".ccls-cache", "Makefile"]
 
@@ -10,7 +10,7 @@ requiredFiles = [".replit", "replit.nix", ".ccls-cache"]
 support = true
 
 [debugger.compile]
-command = ["make", "-C", "hw1", "main-debug"]
+command = ["make", "-C", "active", "main-debug"]
 noFileArgs = true
 
 [debugger.interactive]
@@ -48,7 +48,7 @@ externalConsole = false
 logging = {}
 miDebuggerPath = "gdb"
 name = "g++ - Build and debug active file"
-program = "./hw1/main-debug"
+program = "./active/main-debug"
 request = "launch"
 setupCommands = [
 	{ description = "Enable pretty-printing for gdb", ignoreFailures = true, text = "-enable-pretty-printing" }
